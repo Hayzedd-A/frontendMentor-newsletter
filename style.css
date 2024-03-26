@@ -1,0 +1,150 @@
+@font-face {
+  font-family: roboto-bold;
+  src: url(fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: roboto-regular;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(234, 29%, 20%);
+  display: grid;
+  place-content: center;
+  font-size: 16px;
+  min-height: 97vh;
+  font-family: roboto-regular;
+  padding: 2em 1em;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  padding: 2em;
+  display: flex;
+  gap: 2em;
+  color: hsl(235, 18%, 26%);
+  border-radius: 1em;
+}
+.container .main {
+  padding: 4em 2em;
+}
+.container .main h1 {
+  font-family: roboto-bold;
+  font-size: 3rem;
+}
+.container .main .lists .list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+.container .main > div {
+  margin-top: 1em;
+  line-height: 28px;
+}
+.container .main > div.form {
+  margin-top: 2em;
+  display: grid;
+  gap: 1.5em;
+}
+.container .main > div.form span {
+  float: right;
+  color: red;
+  display: none;
+}
+.container .main input {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+.container .image svg {
+  height: 100%;
+  width: 100%;
+}
+.container .image #mobile {
+  display: none;
+}
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .container .main {
+    padding: 4em 3em;
+  }
+}
+
+button {
+  font-family: roboto-bold;
+  height: 50px;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+}
+button:hover {
+  background: linear-gradient(270deg, hsl(4, 100%, 67%), hsl(5, 78%, 77%));
+}
+button:active {
+  transform: scale(0.98);
+}
+
+.response {
+  background-color: hsl(0, 0%, 100%);
+  padding: 4em;
+  color: hsl(235, 18%, 26%);
+  display: grid;
+  gap: 1em;
+  width: 530px;
+  height: 510px;
+  border-radius: 1em;
+  display: none;
+}
+.response svg {
+  width: 72px;
+}
+.response h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+.response .details {
+  line-height: 28px;
+}
+.response .details span {
+  font-weight: 900;
+}
+.response .button {
+  align-self: end;
+}
+
+@media (max-width: 375px) {
+  .container,
+  body {
+    display: grid;
+    height: unset;
+    width: unset;
+    padding: 0;
+    border-radius: 0;
+  }
+  .container .image,
+  body .image {
+    grid-row-start: 1;
+  }
+  .container .image svg#desktop,
+  body .image svg#desktop {
+    display: none;
+  }
+  .container .image #mobile,
+  body .image #mobile {
+    display: inline-block;
+  }
+}/*# sourceMappingURL=style.css.map */
